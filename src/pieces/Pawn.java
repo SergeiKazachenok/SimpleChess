@@ -2,7 +2,7 @@ package pieces;
 
 import game.Board;
 
-public class Pawn extends Pieces{
+public class Pawn extends Piece {
     public Pawn(boolean isWhite){
         super(isWhite);
     }
@@ -17,13 +17,13 @@ public class Pawn extends Pieces{
         int directions = isWhite ? -1 : 1;
 
         if (startCol == endCol && endRow == startRow + directions &&
-        board.getPieces(endRow,endCol) == null){
+        board.getPiece(endRow,endCol) == null){
             return true;
         }
 
         if (startCol == endCol && ((isWhite && startRow == 6 ) || (!isWhite  && startRow == 1)
-        && endRow ==startRow + 2 * directions && board.getPieces(endRow, endCol) != null &&
-                board.getPieces(endRow, endCol).isWhite() != this.isWhite)){
+        && endRow ==startRow + 2 * directions && board.getPiece(endRow, endCol) != null &&
+                board.getPiece(endRow, endCol).isWhite() != this.isWhite)){
             return true;
         }
         return false;

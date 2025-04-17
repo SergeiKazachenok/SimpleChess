@@ -2,10 +2,10 @@ package pieces;
 
 import game.Board;
 
-public abstract class Pieces {
+public abstract class Piece {
     protected boolean isWhite;
 
-    public Pieces(boolean isWhite){
+    public Piece(boolean isWhite){
         this.isWhite = isWhite;
     }
 
