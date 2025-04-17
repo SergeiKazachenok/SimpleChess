@@ -22,8 +22,8 @@ public class Pawn extends Pieces{
         }
 
         if (startCol == endCol && ((isWhite && startRow == 6 ) || (!isWhite  && startRow == 1)
-        && endRow ==startRow + 2 * directions && board.getPieces(endRow, endCol) != new &&
-                board.getPieces(endRow, endCol).isWhite() != this.isWhite){
+        && endRow ==startRow + 2 * directions && board.getPieces(endRow, endCol) != null &&
+                board.getPieces(endRow, endCol).isWhite() != this.isWhite)){
             return true;
         }
         return false;
