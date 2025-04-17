@@ -11,6 +11,10 @@ public class Board {
         setupBoard();
     }
 
+    public Pieces getPieces(int row, int col) {
+        return board[row][col];
+    }
+
     private void setupBoard(){
         for (int i = 0; i < 8; i++){
             board[1][i] = new Pawn(false);  // Black
