@@ -1,5 +1,7 @@
 package pieces;
 
+import game.Board;
+
 public abstract class Pieces {
     protected boolean isWhite;
 
@@ -12,4 +14,7 @@ public abstract class Pieces {
     }
 
     public abstract String getSymbol();
+
+    public abstract boolean isValid(int startRow, int startCol, int endRow, int endCol, Board board);
+
 }
